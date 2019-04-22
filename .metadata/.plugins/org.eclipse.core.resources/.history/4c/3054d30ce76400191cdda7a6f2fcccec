@@ -1,0 +1,5 @@
+package com.imooc.exception;
+
+public class UserNotExistException {
+
+}

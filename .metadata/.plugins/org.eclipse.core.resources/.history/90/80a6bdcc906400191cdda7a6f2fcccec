@@ -1,0 +1,32 @@
+package com.imooc.web.controller;
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.imooc.dto.User;
+import com.imooc.dto.UserQueryCondition;
+
+@RestController
+public class UserController {
+	
+	@RequestMapping(value = "/user", method = RequestMethod.GET)
+	public List<User> query(UserQueryCondition condition){
+		List<User> users = new ArrayList<>();
+		users.add(new User());
+		return users;
+	}
+	
+	@RequestMapping(value = "/user/{id:\\d+}", method = RequestMethod.GET)
+	public User getInfo(@PathVariable String id) {
+		User user = new User();
+		user.setUsername("tom");
+		return user;
+	}
+
+}
