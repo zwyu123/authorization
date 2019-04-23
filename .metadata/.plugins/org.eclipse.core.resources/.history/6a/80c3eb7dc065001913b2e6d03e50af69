@@ -70,8 +70,6 @@ public class UserController {
 	public List<User> query(UserQueryCondition condition){
 		List<User> users = new ArrayList<>();
 		users.add(new User());
-		users.add(new User());
-		users.add(new User());
 		return users;
 	}
 	

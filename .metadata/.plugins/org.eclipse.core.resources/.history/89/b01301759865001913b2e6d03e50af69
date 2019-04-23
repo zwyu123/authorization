@@ -25,7 +25,7 @@ import com.imooc.dto.UserQueryCondition;
 import com.imooc.exception.UserNotExistException;
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping
 public class UserController {
 	
 	@PostMapping
@@ -69,8 +69,6 @@ public class UserController {
 	@JsonView(User.UserSimpleView.class)
 	public List<User> query(UserQueryCondition condition){
 		List<User> users = new ArrayList<>();
-		users.add(new User());
-		users.add(new User());
 		users.add(new User());
 		return users;
 	}
